@@ -16,7 +16,7 @@ def connect_to_db():
         conn = psycopg2.connect(
             dbname="adobe_db",
             user="postgres",
-            password="nitin9955",
+            password="nikhil9955",
             host="localhost",
             port="5432"
         )
@@ -70,11 +70,11 @@ def call_groq_api(prompt):
     for attempt in range(max_retries):
         try:
             response = client.chat.completions.create(
-                model="llama3-8b-8192",  # Available model
+                model="llama3-8b-8192", 
                 messages=[
                     {
                         "role": "user",
-                        "content": prompt  # Use the prompt variable here
+                        "content": prompt
                     }
                 ],
                 max_tokens=100,
